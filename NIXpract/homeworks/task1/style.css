@@ -1,0 +1,39 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+nav div {
+    padding: 5px;
+}
+
+main {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section{
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width: 60%;
+
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+}
+
+aside div{
+    padding: 5px;
+}
+
