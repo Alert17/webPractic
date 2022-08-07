@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let substrCount = (input, needle, offset, length) => {
+            let newStr = input.substring(offset, length);
+            let index = newStr.indexOf(needle);
+            let count = 0;
+            for(count; index !== -1; count++) {
+                newStr = newStr.substring(index + 1)
+                index = newStr.indexOf(needle)
+            }
+            return count;
+        }
+
+        console.log(substrCount("Good Golly Miss Molly", 'll', 7, 10));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

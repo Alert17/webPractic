@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        const testString = (str) => {
+            let squareOpened = 0;
+            let circleOpened = 0;
+            let first = ''
+            for (let i in str) {
+                switch (str[i]) {
+                    case '[':
+                        if (!circleOpened && !squareOpened)
+                            first = 'square'
+
+                        squareOpened++;
+                        break;
+                    case ']':
+                        squareOpened--;
+                        break;
+                    case '(':
+                        if (!circleOpened && !squareOpened)
+                            first = 'circle'
+
+                        circleOpened++;
+                        break;
+                    case ')':
+                        circleOpened--;
+                        break;
+                }
+                if (squareOpened < circleOpened && first === 'square' ||
+                    squareOpened > circleOpened && first === 'circle' ||
+                    squareOpened < 0 || circleOpened < 0)
+                    return false;
+            }
+            return true;
+        }
+
+        console.log(testString('isu[syv(stc]ts(crs))cs)'));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

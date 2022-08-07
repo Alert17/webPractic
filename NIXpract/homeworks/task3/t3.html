@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function CircleArray() {
+            this.arr = [];
+
+            this.add = function (element) {
+                this.arr.push(element)
+            }
+
+            this.get = function (index) {
+                let newIndex = index < 0 ? this.arr.length + index : index;
+                return newIndex >= this.arr.length ? this.arr[newIndex % this.arr.length] : this.arr[newIndex];
+            }
+
+        }
+
+        let circledArray = new CircleArray();
+        circledArray.add("Kyiv");
+        circledArray.add("Kharkiv");
+        circledArray.add("Kherson");
+        console.log(circledArray.get(4))
+        console.log(circledArray.get(-1))
+    </script>
+</head>
+<body>
+
+</body>
+</html>
